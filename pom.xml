@@ -10,6 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>qa</module>
+        <module>io</module>
     </modules>
     <properties>
         <java.version>1.8</java.version>
