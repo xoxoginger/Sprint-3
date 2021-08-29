@@ -9,3 +9,5 @@ class Room(val name: String, val size: Int) {
     fun load() = "Nothing much to see here..."
 
 }
+
+//TODO: create class TownSquare here...

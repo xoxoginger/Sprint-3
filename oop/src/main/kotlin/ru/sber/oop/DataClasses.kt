@@ -6,4 +6,6 @@ data class User(val name: String, val age: Long) {
 
 fun main() {
     val user1 = User("Alex", 13)
+    //TODO: user2 = ...
+    //TODO: user3 = ...
 }
