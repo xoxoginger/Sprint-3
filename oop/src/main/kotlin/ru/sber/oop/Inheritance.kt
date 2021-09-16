@@ -1,13 +1,33 @@
 package ru.sber.oop
 
-class Room(val name: String, val size: Int) {
+//open, чтобы сделать наследуемым
+open class Room(val name: String, val size: Int) {
+    //par.4
+    constructor(name: String) : this(name, 100)
 
-    val dangerLevel = 5
+    //par.2
+    protected open val dangerLevel = 5
 
     fun description() = "Room: $name"
 
-    fun load() = "Nothing much to see here..."
+    open fun load() = "Nothing much to see here..."
 
 }
 
-//TODO: create class TownSquare here...
+//par.1
+class TownSquare : Room("Town Square", 1000) {
+    //par.3
+    final override fun load() = "Adventures await us!"
+    //par.2
+    override val dangerLevel = super.dangerLevel - 3
+    
+}
+
+fun main() {
+    val room1 = Room("Room1")
+    println(room1.size)
+    val room2 = Room("Room2", 2)
+    println(room2.size)
+    val TS1 = TownSquare()
+    println(TS1.name)
+}
